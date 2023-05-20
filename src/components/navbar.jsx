@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 function navbar() {
   const [Data, SetData] = useState([]);
   const [inputvalue, setinputvalue] = useState("");
+  const [state, setstate] = useState(false);
 
-  //   console.log(Data)
+  // console.log(inputvalue);
   useEffect(() => {
-    const url = `http://universities.hipolabs.com/search?country=kenya`;
+    const url = `http://universities.hipolabs.com/search?country=${inputvalue}`;
 
     async function fetchData(url) {
       try {
@@ -20,14 +21,24 @@ function navbar() {
     }
 
     fetchData(url);
-  }, [inputvalue]);
+  }, [state]);
+
+  const Handlesearch = () => {
+    setstate(!state);
+  };
 
   return (
     <div>
       <div className="Nav">
         <div className="search">
-          <input type="search" name="" id="" />
-          <button>Search</button>
+          <input
+            type="search"
+            name=""
+            id=""
+            value={inputvalue}
+            onChange={(e) => setinputvalue(e.target.value)}
+          />
+          <button onClick={Handlesearch}>Search</button>
         </div>
         <ul className="List--item">
           <li>home</li>
@@ -36,8 +47,9 @@ function navbar() {
           <li>contact</li>
         </ul>
       </div>
+      <p className="search--length">{`There are: ${Data.length} universities`}</p>
       <div className="Container">
-        {Data.map((data,index) => {
+        {Data.map((data, index) => {
           return (
             <div key={index} className="Container--item">
               <p>{data.name}</p>

@@ -25,6 +25,9 @@
   align-items: center;
   padding: 2px 5px;
 }
+.search--length{
+  text-align: center;
+}
 input[type='search']{
   border: none;
   outline: none;
@@ -51,7 +54,10 @@ button{
     background-color: #fbfffe;
     box-shadow: 0px 2px 4px #000;
     border-radius: 5px;
-    padding: 20px 40px;
+    padding: 10px 20px;
     text-align: center;
+}
+.Container--item p{
+  /* margin: 0px 4px; */
 }
 
