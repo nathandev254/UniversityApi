@@ -14,13 +14,12 @@ function navbar() {
         const response = await fetch(url);
         const data = await response.json();
         SetData(data);
-        // console.log(Data);
       } catch (error) {
         console.error("Error:", error.message);
       }
     }
-
     fetchData(url);
+    setinputvalue('')
   }, [state]);
 
   const Handlesearch = () => {

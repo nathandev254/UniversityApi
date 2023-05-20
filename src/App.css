@@ -23,13 +23,13 @@
   border-radius: 5px ;
   display: flex;
   align-items: center;
-  padding: 2px 5px;
 }
 .search--length{
   text-align: center;
 }
 input[type='search']{
   border: none;
+  padding: 0 5px;
   outline: none;
 }
 button{
@@ -39,7 +39,6 @@ button{
   height: 100%;
   padding:7px 10px;
   border-radius: 5px;
-  /* height: auto; */
   color: black;
 }
 .Container{
@@ -57,7 +56,9 @@ button{
     padding: 10px 20px;
     text-align: center;
 }
-.Container--item p{
-  /* margin: 0px 4px; */
+.link{
+  text-decoration: none;
+  padding: 2px 5px;
+  background-color: #000;
 }
 
