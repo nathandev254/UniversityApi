@@ -33,13 +33,13 @@ input[type='search']{
   outline: none;
 }
 button{
-  background-color: #0000ff81;
+  background-color: #161925;
   border: none;
   outline: none;
   height: 100%;
   padding:7px 10px;
   border-radius: 5px;
-  color: black;
+  color: #fff;
 }
 .Container{
   padding: 20px 40px;

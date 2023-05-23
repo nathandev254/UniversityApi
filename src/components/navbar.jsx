@@ -7,7 +7,7 @@ function navbar() {
 
   // console.log(inputvalue);
   useEffect(() => {
-    const url = `http://universities.hipolabs.com/search?country=${inputvalue}`;
+    const url = `https://universitiesapi.onrender.com/v1/api/universities/${inputvalue}`;
 
     async function fetchData(url) {
       try {
